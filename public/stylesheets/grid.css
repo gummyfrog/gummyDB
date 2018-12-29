@@ -1,0 +1,49 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 120px;
+  row-gap: 100px;
+}
+
+.titleBar {
+	width: 100%;
+	font-family: "Helvetica Neue", sans-serif;
+	overflow: hidden;
+}
+
+.titleText {
+	float: left;
+	font-size: 27px;
+	color: black;
+}
+
+.infoText {
+	float: right;
+	font-size: 19px;
+	color: gray;
+	padding-top: 3px;
+	vertical-align: middle;
+}
+
+.desc {
+	width: 100%;
+	font-size: 19px;
+	color: gray;
+	font-family: "Helvetica Neue", sans-serif;
+	padding-bottom: 5px;
+}
+
+.line {
+	background-color: black;
+	width: 75%;
+	height: 2px;
+}
+
+.item {
+	display: inline-block;
+	color: black;
+	width: 100%;
+	text-transform: capitalize;
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 20px;
+}

@@ -1,0 +1,43 @@
+doctype
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/grid.css')
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet")
+
+  body
+    div.content
+      div.wrapper#jstree
+        h1.subgum Just a moment...
+
+  footer
+    script(src="https://platform.twitter.com/widgets.js")
+    script(src='https://cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js')
+
+    script(src='javascripts/palette.js')
+    script(src='javascripts/gridDisplay.js')
+    script.
+      function getCache() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "/status", true);
+        xhr.send();
+         
+        xhr.onreadystatechange = processRequest;
+         
+        function processRequest(e) {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            jsonDisplay(document.getElementById('jstree'), JSON.parse(xhr.response));
+          };
+        };
+      };
+
+      var cache = ('#{currentCache}');
+      cache = cache.replace(/(&quot;)+/g, '"');
+      cache = JSON.parse(cache);
+      jsonDisplay(document.getElementById('jstree'), cache);
+      setInterval(getCache, 5 * 1000);
+
+

@@ -1,0 +1,89 @@
+body {
+  padding: 65px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+a {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 23px;
+  color: #2F2C49;
+  transition: 0.2s ease;
+}
+
+a.external {
+  color: #404040;
+}
+
+a:hover {
+  font-size: 25px;
+}
+
+a.external:hover {
+  font-size: 20px;
+}
+
+p {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+
+.gumhead {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.gum {
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 60px;
+  line-height: 0px;
+  font-weight: 400;
+}
+
+.subgum {
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 21px;
+  line-height: 0px;
+  font-weight: 300;
+}
+
+
+.table {
+  /* height: 70px; */
+	display: table;   /* Allow the centering to work */
+  margin: auto;
+}
+
+ul#horizontal {
+	list-style: none;
+}
+ul#horizontal li {
+	display: inline;
+  padding-left: 10px;
+}
+
+
+.content {
+  padding: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+.contentleft {
+  width: 45%;
+  float:left;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.contentright {
+  width: 45%;
+  float:right;
+  overflow: auto;
+  word-wrap: break-word;
+}
