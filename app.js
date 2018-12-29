@@ -42,8 +42,9 @@ app.post('/status', async function (req, res) {
   if(req.headers.password == process.env.PASSWORD) {
     delete req.body.password;
   	statusCache.push(req.body);
-  	res.send('Update Recieved.');
+  	res.send('Update Received.');
   } else {
+    console.log('Update Denied!');
     res.send('Update Denied. Check your password!')
   }
 })
