@@ -1,14 +1,8 @@
 doctype
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/main.css')
-    link(rel='stylesheet', href='/stylesheets/grid.css')
-    link(href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet")
+	head
 
-  body
-    include nav.jade
-
-    div.content
-      div.wrapper#jstree
-        h1.subgum Error!
+	body
+		h1= message
+		h2= error.status
+		pre #{error.stack}

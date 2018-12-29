@@ -1,3 +1,5 @@
+var json = require('jsonfile');
+
 class statusCache {
 
   constructor() {
@@ -37,6 +39,17 @@ class statusCache {
   push(x) {
     Object.assign(this.json, x);  
   };
+
+  write(name, obj) {
+    json.writeFile(`./src/storage/prod-${name}`, obj, function(err) {
+      if(err) console.log(err);
+      console.log('Fridge Moving done.')
+    });
+  };
+
+  read(name) {
+    return json.readFileSync(`./src/storage/${name}`)
+  }
 }
 
 module.exports = statusCache;
