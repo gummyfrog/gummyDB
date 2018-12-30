@@ -7,6 +7,9 @@ html
     link(href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet")
 
   body
+
+    div.banner
+      h1.gum#random oh aauugghh ooohhh
     div.content
       div.wrapper#jstree
         h1.subgum Just a moment...
@@ -20,6 +23,28 @@ html
     script(src='javascripts/palette.js')
     script(src='javascripts/gridDisplay.js')
     script.
+
+      var phrases = [
+        "oaaguguhh ooohh",
+        "bigger than a breadbox",
+        "bigfoot juice sold here",
+        "door juice sold here",
+        "when u cant fit thru the door",
+        "itachi robot",
+        "welcome to fart town",
+        "cockroach defense lawyer",
+        "hey guys whats going on",
+        "goo tube",
+        "hot dog",
+        "got hod....",
+        "got milk?",
+        "I have three tankers full of milk right around the corner. I am prepared to make a deal with you right here right now. I am looking to convert all of this liquid capital I have into solid capital."
+      ]
+
+      function setRandom(from) {
+        document.getElementById('random').textContent = from[Math.floor(Math.random() * from.length)];
+      }
+
       function getCache() {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', "/status", true);
@@ -33,6 +58,8 @@ html
           };
         };
       };
+
+      setRandom(phrases)
 
       var cache = ('#{currentCache}');
       cache = cache.replace(/(&quot;)+/g, '"');
